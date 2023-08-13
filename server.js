@@ -12,7 +12,6 @@ let chats = initialChats
 
 const port = process.env.PORT || 80;
 
-// app.use(express.static("dist"));
 app.use(bodyParser.json());
 
 app.use(cors())
