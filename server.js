@@ -6,6 +6,7 @@ const utils = require("./utils");
 const app = express();
 const fs = require("fs");
 const {initialChats} = require('./constants')
+var cors = require('cors')
 
 let chats = initialChats
 
@@ -14,6 +15,7 @@ const port = process.env.PORT || 80;
 // app.use(express.static("dist"));
 app.use(bodyParser.json());
 
+app.use(cors())
 
 app.get("/chats/:userIds", function (req, res) {
   try {
